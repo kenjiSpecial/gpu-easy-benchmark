@@ -181,9 +181,7 @@
 			gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
 			gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 			gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
-			// gl.readPixels(0, 0, size, size, gl.RGBA, gl.UNSIGNED_BYTE, ipt.data);
-			//                                 ^ 4 x 32 bit ^
-
+			
 			return ipt.data.subarray(0, ipt.length);
 		},
 		alloc: function(sz) {
